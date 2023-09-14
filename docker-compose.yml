@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  my-discord-bot:
+    build:
+      context: .
+    volumes:
+      - .:/app
+    restart: always
