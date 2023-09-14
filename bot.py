@@ -9,7 +9,7 @@ bot = commands.Bot(command_prefix='!', intents=intents)
 # Load trusted users from a file
 def load_trusted_users():
     try:
-        with open("trustedUsers.uf", "r") as file:
+        with open("trustedUsers.txt", "r") as file:
             return [int(line.strip()) for line in file]
     except FileNotFoundError:
         return []
@@ -61,7 +61,7 @@ async def add(ctx, user_id: int):
         trusted_users.append(user_id)
         
         # Save the updated trusted users list to the file
-        with open("trustedUsers.uf", "a") as file:
+        with open("trustedUsers.txt", "a") as file:
             file.write(f"{user_id}\n")
         
         await ctx.send(f"User {user_id} has been added to the trusted users list.")
