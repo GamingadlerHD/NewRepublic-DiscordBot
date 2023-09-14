@@ -8,11 +8,19 @@ bot = commands.Bot(command_prefix='!', intents=intents)
 
 # Load trusted users from a file
 def load_trusted_users():
+    trusted_users = []
     try:
-        with open("trustedUsers.txt", "r") as file:
-            return [int(line.strip()) for line in file]
+        with open("trustedUsers.txt", "r", encoding="utf-8") as file:
+            for line in file:
+                try:
+                    user_id = int(line.strip())
+                    trusted_users.append(user_id)
+                except ValueError:
+                    print(f"Invalid user ID in the trusted users file: {line.strip()}")
     except FileNotFoundError:
-        return []
+        pass
+    return trusted_users
+
 
 trusted_users = load_trusted_users()
 
