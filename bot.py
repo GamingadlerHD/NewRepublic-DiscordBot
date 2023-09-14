@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 
+
 intents = discord.Intents.all()
 
 bot = commands.Bot(command_prefix='!', intents=intents)
@@ -33,5 +34,5 @@ async def report(ctx, user_id: int, *, reason: str):
     else:
         await ctx.send('You are not authorized to use this command.')
 
-
-bot.run('token')
+def run(token):
+    bot.run(token)
