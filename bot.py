@@ -41,7 +41,7 @@ async def audience(ctx, *, reason: str):
 async def republichelp(ctx):
     help_message = """
     **Commands:**
-     `!report {channel_id} {user_id} {reason}`: Report a user to a specific channel.
+     `!report {user_id} {reason}`: Report a user to a specific channel.
      `!audience {reason}`: Request an audience for a reason.
      `!add {user_id}`: Add user to the trusted users list.
      `!help`: display this.
