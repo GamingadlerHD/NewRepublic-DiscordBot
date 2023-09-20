@@ -38,7 +38,7 @@ async def audience(ctx, *, reason: str):
         await ctx.send('Invalid target channel ID.')
 
 @bot.command()
-async def help(ctx):
+async def republichelp(ctx):
     help_message = """
     **Commands:**
     - `!report {channel_id} {user_id} {reason}`: Report a user to a specific channel.
