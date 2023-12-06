@@ -1,1 +1,3 @@
 # NewRepublic-DiscordBot
+
+## Project discontinued
